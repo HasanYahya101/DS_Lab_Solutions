@@ -52,12 +52,12 @@ public:
 
             // Get all adjacent vertices of the dequeued vertex s
             // If an adjacent vertex has not been visited, then mark it visited and enqueue it
-            for (auto it = adj[s].begin(); it != adj[s].end(); ++it)
+            for (int i : adj[s])
             {
-                if (!visited[*it])
+                if (!visited[i])
                 {
-                    visited[*it] = true;
-                    q.push(*it);
+                    visited[i] = true;
+                    q.push(i);
                 }
             }
         }
